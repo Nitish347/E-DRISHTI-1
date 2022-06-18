@@ -1,3 +1,4 @@
+import 'package:e_drishti/widget.dart';
 import 'package:flutter/material.dart';
 
 class splashscreen extends StatefulWidget {
@@ -11,8 +12,10 @@ class _splashscreenState extends State<splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(a
-      title: Text("E-Drishti"),
+      body: Column(
+      children: <Widget>[
+        appbar(title: 'E-Drishti'),
+      ],
       )
     );
   }
