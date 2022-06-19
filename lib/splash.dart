@@ -15,6 +15,7 @@ class _splashscreenState extends State<splashscreen> {
       body: Column(
       children: <Widget>[
         appbar(title: 'E-Drishti'),
+
       ],
       )
     );
