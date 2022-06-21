@@ -1,7 +1,11 @@
+import 'package:e_drishti/concepts/concepts.dart';
+import 'package:e_drishti/read/read.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 import 'package:intro_slider/dot_animation_enum.dart';
+
+import 'dashboard.dart';
 
 class IntroSliderPage extends StatefulWidget {
   const IntroSliderPage({Key? key}) : super(key: key);
@@ -87,11 +91,11 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   }
 
   void onDonePress() {
-    // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => DashBoard()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard()));
   }
 
   void onSkipPress() {
-    // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => DashBoard()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard()));
   }
 
   List<Widget> renderListCustomTabs() {
