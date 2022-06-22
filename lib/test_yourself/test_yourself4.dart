@@ -1,9 +1,9 @@
+import 'package:e_drishti/test_yourself/test_yourself3.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'test_yourself3.dart';
-
-class TestYourself2 extends StatelessWidget {
-  const TestYourself2({Key? key}) : super(key: key);
+import 'start.dart';
+class TestYourself4 extends StatelessWidget {
+  const TestYourself4({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _Quiz2State extends State<Quiz2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Test Yourself"),),
+      appBar: AppBar(title: Text("Fourth Screen"),),
 
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -35,13 +35,16 @@ class _Quiz2State extends State<Quiz2> {
               children: [
                 LinearPercentIndicator(lineHeight: 15.0,
                   width: 200.0,
-                  percent: 0.25,
+                  percent: 0.75,
                   backgroundColor: Color(0xffE8E8E8),
                   progressColor: Colors.blue,
                 ),
               ],
             ),
-            Text('Draw a triangle',
+            Text('Multiply two numbers:\n '
+                ''
+                ''
+                '2*3=',
               style: TextStyle(
                   fontSize: 30.0,
                   color: Colors.black,
@@ -52,7 +55,7 @@ class _Quiz2State extends State<Quiz2> {
             Center(
               child: SizedBox(height: 50,width: 200,
                 child: ElevatedButton(
-                  child: Text('Next',
+                  child: Text('Finish',
 
                     style: TextStyle(
                         color: Colors.white,
@@ -63,7 +66,7 @@ class _Quiz2State extends State<Quiz2> {
                   // color: new Color(0xff622F74),
                   onPressed: (){
                     Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context)=>TestYourself3()),
+                      MaterialPageRoute(builder: (context)=>StartScreen()),
                     );
                   },
                 ),
