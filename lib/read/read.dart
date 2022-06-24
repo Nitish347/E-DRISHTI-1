@@ -103,7 +103,12 @@ class read_page_State extends State<read_page> {
     Text("Science", style: TextStyle(fontSize: 30, fontFamily: 'Poppins', color: Colors.white),),
     ],
     )),),),),],),
-    ],),),],),
+   ],),
+     ),
+
+          navPage(),
+
+        ],),
     );
   }
 }
