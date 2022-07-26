@@ -19,7 +19,7 @@ class StartScreen extends StatelessWidget {
           children:<Widget>[
             Padding(
               padding: const EdgeInsets.only(top: 60),
-              child: Image(image: AssetImage('images/strt quiz.jpg')),
+              child: Image(image: AssetImage('assets/strt quiz.jpg')),
             ),
 
             SizedBox(height: 50,width: 200,
