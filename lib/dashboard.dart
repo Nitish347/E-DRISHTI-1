@@ -1,4 +1,5 @@
 import 'package:e_drishti/Widget.dart';
+import 'package:e_drishti/place_staggered_gridview.dart';
 import 'package:flutter/material.dart';
 
 import 'dashboardUI.dart';
@@ -47,7 +48,7 @@ class _DashboardState extends State<Dashboard> {
                 indent: 10.0,
                   endIndent: 10.0,
               ),
-              listDrawer(data1: 'Grade: 10', data2: Icons.class__outlined,),
+              listDrawer(data1: 'Grade: 10', data2: Icons.class_outlined,),
               Divider(
                 height: 1.0,
                 thickness: 1.0,
@@ -105,8 +106,7 @@ class _DashboardState extends State<Dashboard> {
                     color: Colors.grey,
                   ),),
                 ),
-              )
-
+              ),
             ],
           ),
         ),
@@ -118,7 +118,34 @@ class _DashboardState extends State<Dashboard> {
         onPressed: () => _scaffoldKey.currentState!.openDrawer(),
         ),
         ),
-    body: dashboardUI(),);
+    body: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Card(
+        color: Color(0xffF3F8FD),
+          elevation: 4.0,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
+              '"Life is a constant journey of trying to open your eyes. I’m just begining my journey, and my eyes aren’t fully open yet."',
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w600,
+                fontSize: 14.0,
+                color: Colors.blue,
+              ),
+            ),
+          ),
+        ),
+      ),
+        // dashboardUI(),
+          PlaceStaggeredGridView(),
+        ],
+      ),
+    )
+    );
 
   }
 }

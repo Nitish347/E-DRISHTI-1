@@ -1,3 +1,4 @@
+import 'package:e_drishti/dashboard.dart';
 import 'package:e_drishti/read/read.dart';
 import 'package:e_drishti/splash.dart';
 import 'package:flutter/material.dart';
