@@ -189,19 +189,20 @@
 //   // }
 // }
 
-
-
-
+import 'package:e_drishti/intro_slider.dart';
+import 'package:e_drishti/practice/shapes/circle.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intro_slider/intro_slider.dart';
 import '../constants.dart';
 import '../emailAuth/emailLogin.dart';
+
 class OTP_Verification extends StatefulWidget {
   static String id = "OTPVerification";
   final String? phoneNumber;
 
-  OTP_Verification({ this.phoneNumber});
-
+  OTP_Verification({this.phoneNumber});
 
   @override
   State<OTP_Verification> createState() => _OTP_VerificationState();
@@ -209,11 +210,11 @@ class OTP_Verification extends StatefulWidget {
 
 class _OTP_VerificationState extends State<OTP_Verification> {
   @override
-  void initState(){
-    // verify();
+  void initState() {
+    verify();
   }
 
-
+  FirebaseAuth auth = FirebaseAuth.instance;
   TextEditingController _otp = new TextEditingController();
 
   // FirebaseAuth auth = FirebaseAuth.instance;
@@ -234,52 +235,65 @@ class _OTP_VerificationState extends State<OTP_Verification> {
         children: [
           Padding(
             padding: const EdgeInsets.all(50.0),
-            child: Container(height:height/3.5,child: Image.asset('assets/images/otp.jpg')),
+            child: Container(
+                height: height / 3.5,
+                child: Image.asset('assets/images/otp.jpg')),
           ),
-
           Padding(
-            padding: EdgeInsets.only(bottom: 20,left: 20,right: 20),
-            child: Column(
-                children:[
-                  Text("Verify with OTP",style: TextStyle(fontSize:25,color: Colors.blueAccent,fontWeight: FontWeight.bold,),),
-                  SizedBox(height: height/70,),
-                  Text("Sent to ${widget.phoneNumber}",style: TextStyle(fontSize: 17,color: Colors.blueAccent[100]),),
-                  SizedBox(height: MediaQuery.of(context).size.height/30,),
-                  Container(
-                    decoration: Constants.decorationNeumorphic3,
-                    child:
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      margin: EdgeInsets.only(left: 20),
-                      child: TextField(
-                        maxLength: 6,
-
-                        keyboardType: TextInputType.number,
-                        controller: _otp,
-                        decoration:  InputDecoration(
-                          counterText: "",
-                            border: InputBorder.none,
-                            hintText: "Enter OTP",
-                            hintStyle:
-                            TextStyle(color: Colors.grey)),
-                      ),
-                    ),
-                  ),]
-            ),
+            padding: EdgeInsets.only(bottom: 20, left: 20, right: 20),
+            child: Column(children: [
+              Text(
+                "Verify with OTP",
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.blueAccent,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: height / 70,
+              ),
+              Text(
+                "Sent to ${widget.phoneNumber}",
+                style: TextStyle(fontSize: 17, color: Colors.blueAccent[100]),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 30,
+              ),
+              Container(
+                decoration: Constants.decorationNeumorphic3,
+                child: Container(
+                  padding: EdgeInsets.all(8.0),
+                  margin: EdgeInsets.only(left: 20),
+                  child: TextField(
+                    maxLength: 6,
+                    keyboardType: TextInputType.number,
+                    controller: _otp,
+                    decoration: InputDecoration(
+                        counterText: "",
+                        border: InputBorder.none,
+                        hintText: "Enter OTP",
+                        hintStyle: TextStyle(color: Colors.grey)),
+                  ),
+                ),
+              ),
+            ]),
           ),
-          SizedBox(height: MediaQuery.of(context).size.height/50,),
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 50,
+          ),
           Padding(
             padding: EdgeInsets.all(20.0),
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 if (otp_visible == true) {
-                  // verifycode();
+                  verifycode();
                 }
               },
               child: Container(
                   height: 50,
                   decoration: Constants.decorationNeumorphic,
-                  child:  const Center(
+                  child: const Center(
                     child: Text(
                       "Verify OTP",
                       style: TextStyle(
@@ -287,50 +301,49 @@ class _OTP_VerificationState extends State<OTP_Verification> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  )
-
-              ),
+                  )),
             ),
           ),
-          TextButton(onPressed: (){
-            Navigator.pushNamed(context, EmailLogin.id);
-          }, child: Text("Login with email?",style: TextStyle(color: Colors.blueAccent,fontSize:15),))
-
+          TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, EmailLogin.id);
+              },
+              child: Text(
+                "Login with email?",
+                style: TextStyle(color: Colors.blueAccent, fontSize: 15),
+              ))
         ],
       ),
     );
   }
 
-  // void verify() {
-  //   auth.verifyPhoneNumber(
-  //       phoneNumber: "+91${widget.phoneNumber}",
-  //       verificationCompleted: (PhoneAuthCredential credential) async {
-  //         await auth.signInWithCredential(credential).then((value) {
-  //           print("login successfully");
-  //         });
-  //       },
-  //       verificationFailed: (FirebaseAuthException exception) {
-  //         print(exception.message);
-  //       },
-  //       codeSent: (String verficationID, int resendtoken) {
-  //         verficationID_received = verficationID;
-  //         setState(() {
-  //           otp_visible = true;
-  //
-  //         });
-  //       },
-  //       codeAutoRetrievalTimeout: (String verficationID) {});
-  // }
+  void verify() {
+    auth.verifyPhoneNumber(
+        phoneNumber: "+91${widget.phoneNumber}",
+        verificationCompleted: (PhoneAuthCredential credential) async {
+          await auth.signInWithCredential(credential).then((value) {
+            print("login successfully");
+          });
+        },
+        verificationFailed: (FirebaseAuthException exception) {
+          print(exception.message);
+        },
+        codeSent: (String verficationID, int? resendtoken) {
+          verficationID_received = verficationID;
+          setState(() {
+            otp_visible = true;
+          });
+        },
+        codeAutoRetrievalTimeout: (String verficationID) {});
+  }
 
-  // void verifycode() async {
-  //   PhoneAuthCredential credential = PhoneAuthProvider.credential(
-  //       verificationId: verficationID_received, smsCode: _otp.text);
-  //   await auth.signInWithCredential(credential).then((value) {
-  //     print("logged in successfully");
-  //     Navigator.of(context).push(MaterialPageRoute(
-  //         builder: (BuildContext context) =>
-  //             Intro()));
-  //
-  //   });
-  // }
+  void verifycode() async {
+    PhoneAuthCredential credential = PhoneAuthProvider.credential(
+        verificationId: verficationID_received, smsCode: _otp.text);
+    await auth.signInWithCredential(credential).then((value) {
+      print("logged in successfully");
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (BuildContext context) => IntroSliderPage()));
+    });
+  }
 }

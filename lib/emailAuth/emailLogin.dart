@@ -165,6 +165,8 @@
 //   }
 // }
 
+import 'package:e_drishti/intro_slider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:sihmain/emailAuth/emailSignup.dart';
@@ -172,6 +174,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../constants.dart';
 import '../phoneAuth/login.dart';
 import 'emailSignup.dart';
+
 class EmailLogin extends StatefulWidget {
   static String id = "EmailLogin";
 
@@ -180,15 +183,11 @@ class EmailLogin extends StatefulWidget {
 }
 
 class _EmailLoginState extends State<EmailLogin> {
+  final _auth = FirebaseAuth.instance;
   String? emailLogin;
   String? passwordLogin;
   @override
   Widget build(BuildContext context) {
-    TextEditingController _emailLogin = TextEditingController();
-    TextEditingController _paaswordLogin = TextEditingController();
-
-
-
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -197,32 +196,30 @@ class _EmailLoginState extends State<EmailLogin> {
         child: Column(
           children: [
             SizedBox(
-              height: height/10,
+              height: height / 10,
             ),
             Center(
-              child: Image.asset("assets/images/email.png",height: height/3.5),
+              child:
+                  Image.asset("assets/images/email.png", height: height / 3.5),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Log In", style: GoogleFonts.poppins(textStyle: Constants.loginStyle)),
+              child: Text("Log In",
+                  style: GoogleFonts.poppins(textStyle: Constants.loginStyle)),
             ),
-
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
-
                   Container(
                     // padding: EdgeInsets.all(.0),
                     decoration: Constants.decorationNeumorphic3,
-                    child:
-                    Container(
+                    child: Container(
                       padding: EdgeInsets.all(8.0),
                       margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(),
                       child: TextField(
-                        onChanged: (value){
+                        onChanged: (value) {
                           setState(() {
                             emailLogin = value;
                           });
@@ -230,40 +227,45 @@ class _EmailLoginState extends State<EmailLogin> {
                         // maxLength: 20,
                         // controller: _emailLogin,
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.email_outlined,color: Colors.blueAccent,),
-                          //   counterText: "",
+                            prefixIcon: Icon(
+                              Icons.email_outlined,
+                              color: Colors.blueAccent,
+                            ),
+                            //   counterText: "",
                             border: InputBorder.none,
                             hintText: "Email",
                             hintStyle: TextStyle(color: Colors.grey)),
                       ),
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Container(
                     // padding: EdgeInsets.all(.0),
-                    decoration:Constants.decorationNeumorphic3,
-                    child:
-                    Container(
+                    decoration: Constants.decorationNeumorphic3,
+                    child: Container(
                       padding: EdgeInsets.all(8.0),
                       margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(),
                       child: TextField(
-                        onChanged: (value){
+                        onChanged: (value) {
                           setState(() {
                             passwordLogin = value;
                           });
                         },
                         obscureText: true,
-                        // controller: _paaswordLogin,
                         decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.password,color: Colors.blueAccent,),
+                            prefixIcon: Icon(
+                              Icons.password,
+                              color: Colors.blueAccent,
+                            ),
                             border: InputBorder.none,
                             hintText: "Password",
                             hintStyle: TextStyle(color: Colors.grey)),
                       ),
                     ),
                   ),
-
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 20,
                   ),
@@ -281,9 +283,20 @@ class _EmailLoginState extends State<EmailLogin> {
                         ),
                       ),
                     ),
-                    onTap: () {
+                    onTap: () async {
                       print(emailLogin);
                       print(passwordLogin);
+                      try {
+                        final User = await _auth.signInWithEmailAndPassword(
+                            email: emailLogin!, password: passwordLogin!);
+                        if (User != null)
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => IntroSliderPage()));
+                      } catch (e) {
+                        print(e);
+                      }
                       // print(_emailLogin.toString());
                       // print(_paaswordLogin.toString());
                       // getName();
@@ -291,18 +304,28 @@ class _EmailLoginState extends State<EmailLogin> {
                       //   Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext)=>OTP_Verification(phoneNumber: _phoneNumber.text)));
                       // }
                     },
-
                   ),
                   SizedBox(
-                    height: height /40,
+                    height: height / 40,
                   ),
-                  TextButton(onPressed: (){
-                    Navigator.pushNamed(context, EmailSignup.id);
-                  }, child: Text("SignUp?",style: TextStyle(color: Colors.blueAccent,fontSize:15),)),
-                  TextButton(onPressed: (){
-                    Navigator.pushNamed(context, PhoneLogin.id);
-                  }, child: Text("Login with Phone Number?",style: TextStyle(color: Colors.blueAccent,fontSize:15),))
-
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, EmailSignup.id);
+                      },
+                      child: Text(
+                        "SignUp?",
+                        style:
+                            TextStyle(color: Colors.blueAccent, fontSize: 15),
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, PhoneLogin.id);
+                      },
+                      child: Text(
+                        "Login with Phone Number?",
+                        style:
+                            TextStyle(color: Colors.blueAccent, fontSize: 15),
+                      ))
                 ],
               ),
             )

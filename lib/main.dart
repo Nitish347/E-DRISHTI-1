@@ -4,13 +4,15 @@ import 'package:e_drishti/filter/class-FILTER.dart';
 import 'package:e_drishti/filter/subjetc_filter.dart';
 import 'package:e_drishti/phoneAuth/login.dart';
 import 'package:e_drishti/phoneAuth/otp-Page.dart';
-import 'package:e_drishti/read/read.dart';
-import 'package:e_drishti/splash.dart';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'emailAuth/emailLogin.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Subject(),
+      home: PhoneLogin(),
       debugShowCheckedModeBanner: false,
       routes: {
         PhoneLogin.id: (context) => PhoneLogin(),
