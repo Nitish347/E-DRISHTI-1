@@ -1,7 +1,14 @@
 import 'package:e_drishti/dashboard.dart';
+import 'package:e_drishti/emailAuth/emailSignup.dart';
+import 'package:e_drishti/filter/class-FILTER.dart';
+import 'package:e_drishti/filter/subjetc_filter.dart';
+import 'package:e_drishti/phoneAuth/login.dart';
+import 'package:e_drishti/phoneAuth/otp-Page.dart';
 import 'package:e_drishti/read/read.dart';
 import 'package:e_drishti/splash.dart';
 import 'package:flutter/material.dart';
+
+import 'emailAuth/emailLogin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +25,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: splashscreen(),
+      home: Subject(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        PhoneLogin.id: (context) => PhoneLogin(),
+        EmailSignup.id: (context) => EmailSignup(),
+        OTP_Verification.id: (context) => OTP_Verification(),
+        EmailLogin.id: (context) => EmailLogin(),
+      },
     );
   }
 }
-

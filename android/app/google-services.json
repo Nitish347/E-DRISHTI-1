@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "270653334549",
+    "project_id": "sihapp-2bc87",
+    "storage_bucket": "sihapp-2bc87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270653334549:android:057f552b4f1ccbd902da1c",
+        "android_client_info": {
+          "package_name": "com.example.e_drishti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270653334549-id6kk5ufbk2lk23kh0t5ucumqcq0rkrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmQraV2PKUxd4WXvEQKEOcJ2EGOTe4ZZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270653334549-id6kk5ufbk2lk23kh0t5ucumqcq0rkrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
