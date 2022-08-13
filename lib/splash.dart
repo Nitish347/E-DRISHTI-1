@@ -30,16 +30,19 @@ class _splashscreenState extends State<splashscreen> {
           children: <Widget>[
             Align( alignment: Alignment.topCenter,child:appbar(title: 'E-Drishti'),),
             Align(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundImage: AssetImage("assets/drishti.png"),
-                    radius: MediaQuery.of(context).size.height * 0.25,
-                    backgroundColor: Colors.transparent,
-                  ),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 50.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundImage: AssetImage("assets/drishti.png"),
+                      radius: MediaQuery.of(context).size.height * 0.25,
+                      backgroundColor: Colors.transparent,
+                    ),
+                  ],
+                ),
               ),),
           ],
         )

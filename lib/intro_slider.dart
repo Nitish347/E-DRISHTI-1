@@ -91,11 +91,11 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   }
 
   void onDonePress() {
-    // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard()));
   }
 
   void onSkipPress() {
-    // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard()));
   }
 
   List<Widget> renderListCustomTabs() {

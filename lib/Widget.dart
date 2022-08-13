@@ -54,8 +54,7 @@ class navPageState extends State<navPage> {
         .padding
         .bottom;
 
-    return Scaffold(
-      bottomNavigationBar: Container(
+    return Container(
         margin: EdgeInsets.fromLTRB(width * 0.5, width * 0.5, width * 0.5, width * 0.8),
         height: width * .155,
         decoration: BoxDecoration(
@@ -159,7 +158,6 @@ class navPageState extends State<navPage> {
       ),
     ),
     ),
-      ),
     );
   }
 
