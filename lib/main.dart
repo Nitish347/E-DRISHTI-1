@@ -29,7 +29,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+<<<<<<< HEAD
       home: read_page(),
+=======
+      home: splashscreen(),
+>>>>>>> 991e729d79bc7b4e546dc88088f2e85bf9c25547
       debugShowCheckedModeBanner: false,
       routes: {
         PhoneLogin.id: (context) => PhoneLogin(),

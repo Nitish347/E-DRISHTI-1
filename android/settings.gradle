@@ -1,3 +1,5 @@
+rootProject.name = 'e_drishti'
+
 include ':app'
 
 def localPropertiesFile = new File(rootProject.projectDir, "local.properties")

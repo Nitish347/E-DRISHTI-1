@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 
@@ -7,8 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:e_drishti/Widget.dart';
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'maths_page.dart';
-
-
 
 
 class read_page extends StatefulWidget {
@@ -28,7 +27,9 @@ class read_page_State extends State<read_page> {
         .of(context)
         .size
         .width;
-    return Scaffold(
+
+    return SafeArea(child: Scaffold(
+
       body: Center(
           child: GridView.extent(
             primary: false,
@@ -55,7 +56,9 @@ class read_page_State extends State<read_page> {
                     child: TextButton(style: TextButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 16),
                     ),
+
                       onPressed: () {},
+
                       child: const Text('Summary'),),
                   ),
                 ],
@@ -77,7 +80,9 @@ class read_page_State extends State<read_page> {
                     child: TextButton(style: TextButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 16),
                     ),
+
                       onPressed: () {Navigator.push(
+
                         context,
                         MaterialPageRoute(builder: (context) => HomePage()),
                       );},
@@ -87,7 +92,9 @@ class read_page_State extends State<read_page> {
               ),
               ExpansionTile(
                 childrenPadding: EdgeInsets.only(left: 20),
+
                 collapsedBackgroundColor: Colors.blueAccent,
+
                 title: Text('Chapter 3', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                 children: <Widget>[
                   Align(
@@ -110,6 +117,8 @@ class read_page_State extends State<read_page> {
               ),
               ExpansionTile(
                 childrenPadding: EdgeInsets.only(left: 20),
+                collapsedBackgroundColor: Colors.blueAccent,
+
                 title: Text('Chapter 4', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                 children: <Widget>[
                   Align(
@@ -131,8 +140,9 @@ class read_page_State extends State<read_page> {
                 ],
               ),
               ExpansionTile(
-                collapsedBackgroundColor: Colors.blueAccent,
+
                 childrenPadding: EdgeInsets.only(left: 20),
+                collapsedBackgroundColor: Colors.blueAccent,
                 title: Text('Chapter 5', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                 children: <Widget>[
                   Align(
@@ -156,6 +166,8 @@ class read_page_State extends State<read_page> {
               navBar(),
             ],
           )),
+    )
+
     );
   }
 }

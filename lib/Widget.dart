@@ -202,6 +202,7 @@ class _MyNavigationBarState extends State<navBar> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -232,6 +233,117 @@ class _MyNavigationBarState extends State<navBar> {
           onTap: _onItemTapped,
           elevation: 5
       ),
+=======
+    final double width = MediaQuery
+        .of(context)
+        .padding
+        .bottom;
+
+    return Container(
+        margin: EdgeInsets.fromLTRB(width * 0.5, width * 0.5, width * 0.5, width * 0.8),
+        height: width * .155,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 30,
+              offset: Offset(0,10),
+            ),
+          ],
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: ListView.builder(
+            itemCount: 4,
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: width * 0.02),
+            itemBuilder: (context, index) => InkWell(
+              onTap: (){
+              setState((){
+              currentindex = index;
+                HapticFeedback.lightImpact();
+              },
+            );
+  },
+  splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+  child: Stack(
+      children: [
+        AnimatedContainer(
+            duration: Duration(seconds: 1),
+    curve: Curves.fastLinearToSlowEaseIn,
+    width: index == currentindex?width * 0.32: width * 0.18,
+    alignment: Alignment.center,
+
+    child: AnimatedContainer(
+    duration: Duration(seconds: 1),
+    curve: Curves.fastLinearToSlowEaseIn,
+    width: index == currentindex?width * 0.32: 0,
+    height: index == currentindex?width * 0.12: 0,
+    decoration: BoxDecoration(
+    color: index == currentindex? Colors.blueAccent.withOpacity(0.2): Colors.transparent,
+    borderRadius: BorderRadius.circular(50),
+    ),
+    ),
+            ),
+    AnimatedContainer(
+    duration: Duration(seconds: 1),
+    curve: Curves.fastLinearToSlowEaseIn,
+    width: index == currentindex
+    ? width * .31
+        : width * .18,
+    alignment: Alignment.center,
+    child: Stack(
+    children: [
+    Row(
+    children: [
+    AnimatedContainer(
+    duration: Duration(seconds: 1),
+    curve: Curves.fastLinearToSlowEaseIn,
+    width:
+    index == currentindex ? width * .13 : 0,
+    ),
+    AnimatedOpacity(
+    opacity: index == currentindex ? 1 : 0,
+    duration: Duration(seconds: 1),
+    curve: Curves.fastLinearToSlowEaseIn,
+    child: Text(
+    index == currentindex
+    ? '${listOfStrings[index]}'
+        : '',
+    style: TextStyle(
+    color: Colors.blueAccent,
+    fontWeight: FontWeight.w600,
+    fontSize: 15,
+    ),
+    ),
+    ),
+    ],
+    ),
+    Row(
+    children: [AnimatedContainer(
+    duration: Duration(seconds: 1),
+    curve: Curves.fastLinearToSlowEaseIn,
+    width:
+    index == currentindex ? width * .03 : 20,
+    ),
+    Icon(
+    listOfIcons[index],
+    size: width * .076,
+    color: index == currentindex
+    ? Colors.blueAccent
+        : Colors.black26,
+    ),
+    ],
+    ),
+    ],
+    ),
+    ),
+    ],
+      ),
+    ),
+    ),
+>>>>>>> 991e729d79bc7b4e546dc88088f2e85bf9c25547
     );
   }
 }
