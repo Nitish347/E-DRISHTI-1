@@ -1,5 +1,6 @@
 import 'dart:io';
 
+
 import 'maths_page.dart';
 // import 'science_page.dart';
 import 'package:flutter/material.dart';
@@ -152,6 +153,7 @@ class read_page_State extends State<read_page> {
                   ),
                 ],
               ),
+              navBar(),
             ],
           )),
     );

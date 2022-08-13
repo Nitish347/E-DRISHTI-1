@@ -1,6 +1,7 @@
 import 'dart:async';
 
-import 'package:e_drishti/widget.dart';
+import 'package:e_drishti/Widget.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 import 'intro_slider.dart';
@@ -28,7 +29,7 @@ class _splashscreenState extends State<splashscreen> {
         backgroundColor: Colors.white,
         body: Stack(
           children: <Widget>[
-            Align( alignment: Alignment.topCenter,child:appbar(title: 'E-Drishti'),),
+            // Align( alignment: Alignment.topCenter,child: appbar(title: 'E-Drishti'),),
             Align(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
