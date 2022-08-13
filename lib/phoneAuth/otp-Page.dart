@@ -211,9 +211,15 @@ class OTP_Verification extends StatefulWidget {
 class _OTP_VerificationState extends State<OTP_Verification> {
   @override
   void initState() {
+    setState(() {
+      error = false;
+      loading = true;
+    });
     verify();
   }
 
+  static bool loading = false;
+  static bool error = false;
   FirebaseAuth auth = FirebaseAuth.instance;
   TextEditingController _otp = new TextEditingController();
 
@@ -257,6 +263,15 @@ class _OTP_VerificationState extends State<OTP_Verification> {
                 "Sent to ${widget.phoneNumber}",
                 style: TextStyle(fontSize: 17, color: Colors.blueAccent[100]),
               ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: error
+                    ? Text(
+                        "Incorrect OTP",
+                        style: TextStyle(color: Colors.red),
+                      )
+                    : Text(""),
+              ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 30,
               ),
@@ -286,6 +301,9 @@ class _OTP_VerificationState extends State<OTP_Verification> {
             padding: EdgeInsets.all(20.0),
             child: InkWell(
               onTap: () {
+                setState(() {
+                  loading = true;
+                });
                 if (otp_visible == true) {
                   verifycode();
                 }
@@ -293,14 +311,18 @@ class _OTP_VerificationState extends State<OTP_Verification> {
               child: Container(
                   height: 50,
                   decoration: Constants.decorationNeumorphic,
-                  child: const Center(
-                    child: Text(
-                      "Verify OTP",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  child: Center(
+                    child: loading
+                        ? CircularProgressIndicator(
+                            color: Colors.white,
+                          )
+                        : Text(
+                            "Verify OTP",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                   )),
             ),
           ),
@@ -332,18 +354,30 @@ class _OTP_VerificationState extends State<OTP_Verification> {
           verficationID_received = verficationID;
           setState(() {
             otp_visible = true;
+            loading = false;
           });
         },
         codeAutoRetrievalTimeout: (String verficationID) {});
   }
 
   void verifycode() async {
-    PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: verficationID_received, smsCode: _otp.text);
-    await auth.signInWithCredential(credential).then((value) {
-      print("logged in successfully");
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (BuildContext context) => IntroSliderPage()));
-    });
+    try {
+      PhoneAuthCredential credential = PhoneAuthProvider.credential(
+          verificationId: verficationID_received, smsCode: _otp.text);
+      await auth.signInWithCredential(credential).then((value) {
+        print("logged in successfully");
+        setState(() {
+          error = false;
+          loading = false;
+        });
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => IntroSliderPage()));
+      });
+    } catch (e) {
+      setState(() {
+        loading = false;
+        error = true;
+      });
+    }
   }
 }

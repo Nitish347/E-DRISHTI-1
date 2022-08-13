@@ -186,6 +186,8 @@ class _EmailLoginState extends State<EmailLogin> {
   final _auth = FirebaseAuth.instance;
   String? emailLogin;
   String? passwordLogin;
+  bool error = false;
+  bool loading = false;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -207,6 +209,12 @@ class _EmailLoginState extends State<EmailLogin> {
               child: Text("Log In",
                   style: GoogleFonts.poppins(textStyle: Constants.loginStyle)),
             ),
+            error
+                ? Text(
+                    "Please Enter Your Name and Phone Number",
+                    style: TextStyle(color: Colors.red),
+                  )
+                : Text(""),
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Column(
@@ -273,17 +281,24 @@ class _EmailLoginState extends State<EmailLogin> {
                     child: Container(
                       height: 50,
                       decoration: Constants.decorationNeumorphic,
-                      child: const Center(
-                        child: Text(
-                          "Login",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                      child: Center(
+                        child: loading
+                            ? CircularProgressIndicator(
+                                color: Colors.white,
+                              )
+                            : Text(
+                                "Login",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                       ),
                     ),
                     onTap: () async {
+                      setState(() {
+                        loading = true;
+                      });
                       print(emailLogin);
                       print(passwordLogin);
                       try {
@@ -296,6 +311,10 @@ class _EmailLoginState extends State<EmailLogin> {
                                   builder: (context) => IntroSliderPage()));
                       } catch (e) {
                         print(e);
+                        setState(() {
+                          error = true;
+                          loading = false;
+                        });
                       }
                       // print(_emailLogin.toString());
                       // print(_paaswordLogin.toString());

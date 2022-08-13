@@ -169,6 +169,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../constants.dart';
 import '../emailAuth/emailLogin.dart';
 import 'otp-Page.dart';
+
 class PhoneLogin extends StatefulWidget {
   static String id = "PhoneLogin";
 
@@ -178,6 +179,8 @@ class PhoneLogin extends StatefulWidget {
 
 class _PhoneLoginState extends State<PhoneLogin> {
   TextEditingController _phoneNumber = TextEditingController();
+  TextEditingController _name = TextEditingController();
+  bool empty = false;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -188,49 +191,53 @@ class _PhoneLoginState extends State<PhoneLogin> {
         child: Column(
           children: [
             SizedBox(
-              height: height/10,
+              height: height / 10,
             ),
             Center(
-              child: Image.asset("assets/images/login.png",height: height/3.5),
+              child:
+                  Image.asset("assets/images/login.png", height: height / 3.5),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Log In", style: GoogleFonts.poppins(textStyle: Constants.loginStyle)),
+              child: Text("Log In",
+                  style: GoogleFonts.poppins(textStyle: Constants.loginStyle)),
             ),
-
+            empty
+                ? Text(
+                    "Please Enter Your Name and Phone Number",
+                    style: TextStyle(color: Colors.red),
+                  )
+                : Text(""),
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
-
                   Container(
                     // padding: EdgeInsets.all(.0),
                     decoration: Constants.decorationNeumorphic3,
-                    child:
-                    Container(
+                    child: Container(
                       padding: EdgeInsets.all(8.0),
                       margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(),
                       child: TextField(
-
                         maxLength: 20,
-                        // controller: name,
+                        controller: _name,
                         decoration: InputDecoration(
-                          // prefixIcon: Icon(Icons.account_circle_outlined,color: Colors.blueAccent,),
-                          counterText: "",
+                            // prefixIcon: Icon(Icons.account_circle_outlined,color: Colors.blueAccent,),
+                            counterText: "",
                             border: InputBorder.none,
                             hintText: "Enter Your Name",
                             hintStyle: TextStyle(color: Colors.grey)),
                       ),
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Container(
                     // padding: EdgeInsets.all(.0),
-                    decoration:Constants.decorationNeumorphic3,
-                    child:
-                    Container(
+                    decoration: Constants.decorationNeumorphic3,
+                    child: Container(
                       padding: EdgeInsets.all(8.0),
                       margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(),
@@ -238,20 +245,18 @@ class _PhoneLoginState extends State<PhoneLogin> {
                         maxLength: 10,
                         controller: _phoneNumber,
                         decoration: InputDecoration(
-                          counterText: "",
+                            counterText: "",
                             border: InputBorder.none,
                             hintText: "Enter Phone Number",
                             hintStyle: TextStyle(color: Colors.grey)),
                       ),
                     ),
                   ),
-
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 20,
                   ),
                   InkWell(
                     child: Container(
-
                       height: 50,
                       decoration: Constants.decorationNeumorphic,
                       child: const Center(
@@ -266,19 +271,31 @@ class _PhoneLoginState extends State<PhoneLogin> {
                     ),
                     onTap: () {
                       // getName();
-                      if(_phoneNumber.text.isNotEmpty){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext)=>OTP_Verification(phoneNumber: _phoneNumber.text)));
+                      if (_phoneNumber.text.isNotEmpty &&
+                          _name.text.isNotEmpty &&
+                          _phoneNumber.text.length == 10) {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext) => OTP_Verification(
+                                phoneNumber: _phoneNumber.text)));
+                      } else {
+                        setState(() {
+                          empty = true;
+                        });
                       }
                     },
-
                   ),
                   SizedBox(
                     height: height / 20,
                   ),
-                  TextButton(onPressed: (){
-                    Navigator.pushNamed(context, EmailLogin.id);
-                  }, child: Text("Login with email?",style: TextStyle(color: Colors.blueAccent,fontSize:15),))
-
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, EmailLogin.id);
+                      },
+                      child: Text(
+                        "Login with email?",
+                        style:
+                            TextStyle(color: Colors.blueAccent, fontSize: 15),
+                      ))
                 ],
               ),
             )

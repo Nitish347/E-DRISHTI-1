@@ -18,6 +18,8 @@ class _EmailSignupState extends State<EmailSignup> {
   String? email;
   String? password;
   String? confirmPassword;
+  bool loading = false;
+  String error = "";
   @override
   Widget build(BuildContext context) {
     TextEditingController _email = TextEditingController();
@@ -40,6 +42,13 @@ class _EmailSignupState extends State<EmailSignup> {
               padding: const EdgeInsets.all(8.0),
               child: Text("Sign Up",
                   style: GoogleFonts.poppins(textStyle: Constants.loginStyle)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                error,
+                style: TextStyle(color: Colors.red),
+              ),
             ),
             Padding(
               padding: EdgeInsets.all(20.0),
@@ -129,31 +138,51 @@ class _EmailSignupState extends State<EmailSignup> {
                     child: Container(
                       height: 50,
                       decoration: Constants.decorationNeumorphic,
-                      child: const Center(
-                        child: Text(
-                          "Sign Up",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                      child: Center(
+                        child: loading
+                            ? CircularProgressIndicator(
+                                color: Colors.white,
+                              )
+                            : Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                       ),
                     ),
                     onTap: () async {
+                      setState(() {
+                        loading = true;
+                      });
                       print(email);
                       print(password);
                       print(confirmPassword);
-                      try {
-                        final newUser =
-                            await _auth.createUserWithEmailAndPassword(
-                                email: email!, password: password!);
-                        if (newUser != null)
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => IntroSliderPage()));
-                      } catch (e) {
-                        print(e);
+                      if (email.toString().isNotEmpty &&
+                          password.toString().isNotEmpty &&
+                          password == confirmPassword) {
+                        try {
+                          final newUser =
+                              await _auth.createUserWithEmailAndPassword(
+                                  email: email!, password: password!);
+                          if (newUser != null)
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => IntroSliderPage()));
+                        } catch (err) {
+                          print(err);
+                          setState(() {
+                            loading = false;
+                            error = err.toString();
+                          });
+                        }
+                      } else {
+                        setState(() {
+                          loading = false;
+                          error = "Check Email id and Password";
+                        });
                       }
                       // getName();
                       // if(_phoneNumber.text.isNotEmpty){
