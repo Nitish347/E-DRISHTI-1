@@ -49,7 +49,7 @@ class _DashboardState extends State<Dashboard> {
               ),
               listDrawer(
                 data1: 'Grade: 10',
-                data2: Icons.class_outlined,
+                data2: Icons.class__outlined,
               ),
               Divider(
                 height: 1.0,
