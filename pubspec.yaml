@@ -35,7 +35,7 @@ dependencies:
   dropdown_button2: 1.1.0
   flutter_shapes: ^0.3.0
   firebase_auth: ^3.4.2
-  flutter_pdfview: ^1.2.3
+  advance_pdf_viewer: any
   path_provider: ^2.0.0
   http: ^0.13.0
   firebase_core:
