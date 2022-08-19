@@ -163,7 +163,7 @@ class read_page_State extends State<read_page> {
                   ),
                 ],
               ),
-              navBar(),
+              // navBar(),
             ],
           )),
     )

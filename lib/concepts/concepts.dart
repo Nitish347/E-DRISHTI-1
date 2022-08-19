@@ -19,19 +19,19 @@ class _ConceptsState extends State<Concepts> {
 
     void onTap(int index){
       if(index==0){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'What is a Square?', content: 'A flat geometric figure that has four equal sides and four right angles. Relate it to something formed with four equal or roughly equal sides and four right angles the squares of a checkerboard.', image: 'https://cdni.iconscout.com/illustration/premium/thumb/man-pushing-square-shape-4931347-4127988.png')));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'What is a Square?', content: 'A flat geometric figure that has four equal sides and four right angles.\n\nRelate it to something formed with four equal or roughly equal sides and four right angles the squares of a checkerboard.', image: 'https://www.creatopy.com/blog/wp-content/uploads/2020/07/Geometric-shapes-in-design-1024x525.png')));
       }
       else if(index==1){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'What is a Sine Graph?', content: '', image: '')));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'What is a Sine Graph?', content: 'The sin graph is a visual representation of the sine function for a given range of angles.\nThe horizontal axis of a trigonometric graph represents the angle, usually written as θ, and the y-axis is the sine function of that angle.\nThe graph does not start at the origin but it does pass through it.', image: 'https://www.varsitytutors.com/assets/vt-hotmath-legacy/hotmath_help/topics/graphing-sine-function/sine-graph.gif')));
       }
       else if(index==2){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'What is a Parabola?', content: '', image: '')));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'What is a Parabola?', content: 'A parabola is a U-shaped plane curve where any point is at an equal distance from a fixed point (known as the focus) and from a fixed straight line which is known as the directrix.', image: 'https://studiousguy.com/wp-content/uploads/2021/06/Parabola.jpeg')));
       }
       else if(index==3){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'Understanding Area?', content: '', image: '')));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'Understanding Area?', content: 'The area is the region bounded by the shape of an object.\nThe space covered by the figure or any two-dimensional geometric shape, in a plane, is the area of the shape.', image: 'https://i.pinimg.com/736x/d4/48/0a/d4480a5d14f48f3fd65775a0f3c3cb39.jpg')));
       }
       else if(index==4){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'Understanding Perimeter', content: '', image: '')));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Concept_Widget(title: 'Understanding Perimeter', content: 'Perimeter is the distance around the outside of a shape.', image: 'https://i.pinimg.com/736x/d4/48/0a/d4480a5d14f48f3fd65775a0f3c3cb39.jpg')));
       }
 
     }
