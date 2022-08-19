@@ -3,35 +3,28 @@ import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:e_drishti/read/ApiServiceProvider.dart';
 
 class PdfViewerPage extends StatefulWidget {
-  @override
-  _PdfViewerPageState createState() => _PdfViewerPageState();
-}
+  const PdfViewerPage({Key? key, required this.url}) : super(key: key);
 
-class _PdfViewerPageState extends State<PdfViewerPage> {
-  late String localPath;
+  final String url;
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
 
-    ApiServiceProvider.loadPDF().then((value) {
-      setState(() {
-        localPath = value;
-      });
-    });
-  }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: localPath != null
+      body: url != null
           ? PDFView(
-        filePath: localPath,
+        filePath: url,
       )
           : Center(child: CircularProgressIndicator()),
     );
   }
-}
 
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
+  }
+}
