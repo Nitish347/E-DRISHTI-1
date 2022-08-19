@@ -2,12 +2,12 @@
 import 'dart:io';
 
 
-import 'maths_page.dart';
-// import 'science_page.dart';
+import 'package:e_drishti/dashboard.dart';
+import 'package:e_drishti/read/PdfViewerPage.dart';
 import 'package:flutter/material.dart';
 import 'package:e_drishti/Widget.dart';
-import 'package:syncfusion_flutter_pdf/pdf.dart';
-import 'maths_page.dart';
+
+
 
 
 class read_page extends StatefulWidget {
@@ -84,7 +84,7 @@ class read_page_State extends State<read_page> {
                       onPressed: () {Navigator.push(
 
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => PdfViewerPage()),
                       );},
                       child: const Text('Summary'),),
                   ),
