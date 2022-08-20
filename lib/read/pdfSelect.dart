@@ -35,6 +35,15 @@ class _PdfSelectState extends State<PdfSelect> {
     "assets/pdf/chapter 6.pdf",
   ];
 
+  List<String> imgUrl = [
+    "https://img.favpng.com/8/6/15/shape-three-dimensional-space-geometry-clip-art-png-favpng-fqS4Pm4REyySkDJtf4qdgTzxd.jpg",
+    "https://previews.123rf.com/images/katerynadi/katerynadi1701/katerynadi170100001/69807704-number-letter-colored-concept-number-one-to-nine-letter-idea-numerals-typography-design-element-for-.jpg",
+    "https://clipart.world/wp-content/uploads/2020/08/old-math-teacher-png-transparent.png",
+    "https://thumbs.dreamstime.com/z/girl-math-problem-subtraction-illustration-88110836.jpg",
+    "https://i.pinimg.com/originals/c8/66/c9/c866c9d58a60e1209cc22a904fbacd7c.png",
+    "https://w7.pngwing.com/pngs/359/349/png-transparent-analog-clock-illustration-time-management-work-learning-mathematics-part-time-problem-solving-study-skills.png"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,6 +66,7 @@ class _PdfSelectState extends State<PdfSelect> {
                       chap: chapters[i],
                       pdfPath: pdfList[i],
                       chapName: chapterName[i],
+                      imgUrl: imgUrl[i],
                     )
                 ]),
           ),
@@ -70,7 +80,12 @@ class Tile extends StatelessWidget {
   String chap;
   String pdfPath;
   String chapName;
-  Tile({required this.chap, required this.pdfPath, required this.chapName});
+  String imgUrl;
+  Tile(
+      {required this.chap,
+      required this.pdfPath,
+      required this.chapName,
+      required this.imgUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +117,7 @@ class Tile extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/pdf/book.jpg"),
+                  image: NetworkImage(imgUrl),
                 ),
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(5)),
