@@ -1,0 +1,252 @@
+﻿Science and Physics
+
+
+Topic 1: Sound
+
+
+Sound is defined as the vibrations that can travel through any medium like air and can be heard when the vibrations reach an individual or an animal’s ear. Musical sound is a sound which produces a pleasing effect to the ear while noise is defined as a sound that creates a jarring or an unpleasant effect.
+Types of Sound
+There are two distinct types of sound-
+a. Inaudible Sound: Inaudible sounds have a frequency above 20,000 Hz or below 20 Hz. An average human ear cannot hear a sound within this frequency level.
+* Low-frequency sounds that remain inaudible to the human ear are known as Infrasonics.
+* High-frequency sounds that remain inaudible to the human ear are known as Ultrasonics.
+
+
+b. Audible Sound: The audible sounds are vibrations whose frequency lies between 20 Hz and 20,000 Hz (20 kHz). The human ear can hear this frequency level.
+  
+
+
+
+Characteristics of Sound
+There are three primary characteristics of sound:
+a. Loudness: Loudness is a sensation produced in ears which enables individuals to distinguish between a faint and loud sound. If the amplitude of vibrations is larger, the sound produced will be more audible. Loudness is directly proportional to the square of the amplitude of a wave.
+b. Pitch: Pitch is a characteristic of sound which enables individuals to distinguish a soft sound and a shrill sound. Higher the frequency of vibrations, higher would be the pitch and shrillness.
+c. Quality: Quality is a characteristic of sound which enables individuals to distinguish the musical sounds emitted by different voices or musical instruments, even though they possess the same loudness and pitch.
+
+
+
+
+
+
+  
+
+
+
+What is Amplitude and Time Period?
+Amplitude: is defined as the maximum extent of vibrations produced by any vibrating body from its mean position. An example of amplitude is how much a radio wave moves back and forth.
+
+
+Time Period: One completed to and fro movement of the pendulum from its mean position is known as an oscillation. The total time taken by the vibrating particle to complete one oscillation is known as the Time Period.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Topic 2: Motions
+
+
+We can define motion as the change of position of an object with respect to time. A book falling off a table, water flowing from the tap, rattling windows, etc all exhibit motion. Even the air that we breathe exhibits motion! Everything in the universe moves. We live in a universe that is in continual motion. The fundamental particle of a matter that is the atom is in constant motion too. Every physical process in the universe is composed of motion of some sort. The motion can either be swift or slow, but motion exists.
+
+
+Types of Motion:
+As per physics and mechanics, there are mainly 4 types of motion, i.e.
+* Rotary Motion:
+Rotational motion can be defined as when an object moves along its axis and all the parts of it move for a different distance in a given period of time. Thus, if an object is under rotational motion all of its parts will move different distances in the same interval of time. As an example, merry-go-round, blades of a fan, blades of a windmill etc. 
+* Oscillatory Motion:
+Oscillatory motion is simply the motion that an object does by repeating the same movement again and again. Oscillatory motion would keep on moving forever when there is an absence of friction but in our real world, the motion eventually stops and comes to an equilibrium. Some of the best examples of Oscillatory Motion are:
+* A swinging swing
+* The motion of a pendulum
+* A boat tossing up and down a river
+* The tuning fork
+
+
+* Linear Motion:
+Linear motion can be defined as the movement of a body on a straight line without any deviation.  Important examples of linear motion are:
+* An athlete running on a straight track of a park
+* a bullet shot from a pistol
+
+
+* Reciprocating Motions:
+ A repetitive and continuous up and down or back and forth motion like a needle in a sewing machine.
+* Circular Motion:
+When an object is constantly moving in circular a path it is called circular motion. In a circular motion, the speed of the object should be constant. A few examples of circular motion are:
+* Movement of the earth on its axis
+* a bicycle or a car moving on a circular track of the park
+* the motion of the moon around the earth etc.
+  
+  
+
+Topic 3: Magnets
+
+
+An object which is capable of producing a magnetic field and attracting unlike poles and repelling like poles.
+Properties of Magnet
+Following are the properties of a magnet:
+* When a magnet is dipped in iron filings, we can observe that the iron filings cling to the end of the magnet as the attraction is maximum at the ends of the magnet. These ends are known as the poles of the magnets.
+* Magnetic poles always exist in pairs.
+* Whenever a magnet is suspended freely in mid-air, it always points in a north-south direction. Pole pointing towards geographic north is known as the North Pole and the pole pointing towards geographic south is known as the South Pole.
+* Like poles repel while unlike poles attract.
+* The magnetic force between the two magnets is greater when the distance between these magnets is lesser.
+  
+
+
+
+Types of Magnets
+There are three types of magnets, and they are as follows:
+
+
+* Permanent magnet
+Permanent magnets are those magnets that are commonly used. They are known as permanent magnets because they do not lose their magnetic property once they are magnetized.
+Following are the ways to demagnetize the permanent magnets:
+* Exposing magnets to extreme temperatures.
+* The magnetic attraction between the magnet’s atoms gets loosened when they are hammered.
+* Stroking one magnet with the other in an inappropriate manner will reduce the magnetic strength.
+There are four types of permanent magnets:
+* Ceramic or ferrite
+* Alnico
+* Samarium Cobalt (SmCo)
+* Neodymium Iron Boron (NIB)
+
+
+* Temporary magnet
+Temporary magnets can be magnetized in the presence of a magnetic field. When the magnetic field is removed, these materials lose their magnetic property. Iron nails and paper-clips are examples of the temporary magnet.
+* Electromagnets
+Electromagnets consist of a coil of wire wrapped around the metal core made from iron. When this material is exposed to an electric current, the magnetic field is generated making the material behave like a magnet. The strength of the magnetic field can be controlled by controlling the electric current.
+Uses of Magnets
+Following are the uses of magnets:
+* Magnets are used for constructing magnetic needles and mariner’s compass.
+* Permanent magnets find applications in generators, electric accelerators, and electric motors.
+* Electromagnets find application in speakers, electric bells, and electric cranes.
+* Magnets are used for the separation of iron filling from other solid mixture
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Topic 4: Water
+Suppose for some reason your family gets only one bucket of water everyday for a week. Imagine what would happen? Would you be able to cook, clean utensils, wash clothes or bathe? What are the other activities you would not be able to do? What would happen if we do not have easy access to water for a long period of time?
+WHERE DO WE GET WATER FROM?
+Each of us may be getting water into our homes in different ways. But, finally, all of us get water from the same sources such as ponds, lakes, rivers and wells. We have discussed some of the sources of water. Where does the water come from, to fill these ponds, lakes, rivers and wells?
+The water in the oceans and seas has many salts dissolved in it — the water is saline. So, it is not fit for drinking and other domestic, agricultural and industrial needs. You might have heard the famous lines of the poem “Rime of the Ancient Mariner” written by S.T. Coleridge in 1798:
+ “Water water everywhere
+ Nor any drop to drink”
+ Here the poet has described the plight of sailors on a ship lost in the ocean. Yet, oceans play an important role in supplying the water that we use. Do you find this surprising? After all, the water that we use is not salty. Many of us live in places far away from the oceans. Does the water supply in these places also depend on the oceans? How does the ocean water reach ponds, lakes, rivers and wells, which supply us with water? How come the water from these sources is not saline anymore?
+
+
+
+
+
+
+
+
+WATER CYCLE
+Disappearing Trick of Water
+During the daytime, sunlight falls on the water in oceans, rivers, lakes and ponds. The fields and other land areas also receive sunlight. As a result, water from all these places continuously changes into vapour. However, the salts dissolved in the water are left behind. during the daytime all the air surrounding us gets heated. This warm air provides heat for the evaporation of water in the shade. Thus, evaporation takes place from all open surfaces of water. As a result, water vapour gets continuously added to air. However, evaporation of water is a slow process. That is why we rarely notice its loss from a bucket full of water. In sunlight, evaporation takes place faster. On heating water on a burner, its evaporation takes place even faster. Is there any other process through which water vapour gets transferred into air? 
+How are clouds formed?
+The process of condensation plays an important role in bringing water back to the surface of earth. How does it happen? As we go higher from the surface of the earth, it gets cooler. When the air moves up, it gets cooler and cooler. At sufficient heights, the air becomes so cool that the water vapour present in it condenses to form tiny drops of water called droplets. It is these tiny droplets that remain floating in air and appear to us as clouds.
+It so happens that many droplets of water come together to form larger sized drops of water. Some drops of water become so heavy that they begin to fall. These falling water-drops are, what we call rain. In special conditions, it may also fall as hail or snow. Thus, water in the form of vapour goes into air by evaporation and transpiration, forms clouds, and then comes back to the ground as rain, hail or snow. 
+BACK TO THE OCEANS
+What happens to the water that rain and snow bring to different regions of earth? Almost all land surfaces are above the level of oceans. Most of the water that falls on the land as rain and snow sooner or later goes back to the oceans. This happens in many ways. Snow in the mountains melts into water. This water flows down the mountains in the form of streams and rivers. Some of the water that falls on land as rain, also flows in the form of rivers and streams. Most of the rivers cover long distances on land and ultimately fall into a sea or an ocean. However, water of some rivers flows into lakes.
+The rainwater also fills up the lakes and ponds. A part of the rainwater gets absorbed by the ground and seems to disappear in the soil. Some of this water is brought back to the air by the process of evaporation and transpiration. The rest seeps into the ground. Most of this water becomes available to us as ground water. Open wells are fed by ground water. Ground water is the source for many lakes as well. It is also this ground water which is drawn by a handpump or a tubewell. The more handpumps or tubewells that are used in an area, the deeper we need to dig to find this ground water. The loss in the level of ground water due to over use, is worrisome. Paheli wants to share a concern with you. In those areas where the land has little or no vegetation, the rainwater flows away quickly. Flowing rainwater also takes the top layer of the soil away with it. There are few areas where most of the land is covered with concrete. This reduces the seepage of rainwater into the ground which ultimately affects the availability of ground water.
+We now know that water brought back to the surface of the earth by rain, hail or snow, goes back to oceans. Thus, water from the ocean and surface of the earth goes into air as vapour; returns as rain, hail or snow and finally goes back to the oceans. The circulation of water in this manner is known as the water cycle. This circulation of water between ocean and land is a continuous process. This maintains the supply of water on land.
+  
+
+
+
+
+
+
+
+Topic 5: FORCE 
+
+
+Force – A Push or a Pull
+Actions like picking, opening, shutting, kicking, hitting, lifting, flicking, pushing, pulling are often used to describe certain tasks. Each of these actions usually results in some kind of change in the state of motion of an object. Can these terms be replaced with one or more terms?
+
+
+Forces are due to an Interaction
+Suppose a man is standing behind a stationary car. Will the car move due to his presence? Suppose the man now begins to push the car, that is, he applies a force on it. The car may begin to move in the direction of the applied force. Note that the man has to push the car to make it move.
+Activity 11.2
+Choose a heavy object like a table or a box, which you can move only by pushing hard. Try to push it all by yourself. Can you move it? Now ask one of your friends to help you in pushing it in the same direction . Is it easier to move it now? Can you explain why? Now push the same object, but ask your friend to push it from the opposite side. Does the object move? If it does, note the direction in which it moves. Can you guess which one of you is applying a larger force?
+Let’s Take a example of tug-of-war? In this game two teams pull at a rope in opposite directions. Members of both the teams try to pull the rope in their direction. Sometimes the rope simply does not move. Is it not similar to the situation? The team that pulls harder, that is, applies a larger force, finally wins the game. What do these examples suggest about the nature of force? Forces applied on an object in the same direction add to one another. Now recall what happened when you and your friend pushed the heavy box in the same direction in Activity 11.2. If the two forces act in the opposite directions on an object, the net force acting on it is the difference between the two forces. What did you observe in Activity 11.2 when both of you were pushing the heavy box from opposite directions? Recall that in the tug-of-war when two teams pull equally hard, the rope does not move in any direction. So, we learn that a force could be larger or smaller than the other or equal to each other. The strength of a force is usually expressed by its magnitude. We have also to specify the direction in which a force acts. Also, if the direction or the magnitude of the applied force changes, its effect also changes
+
+
+In general, more than one force may be acting on an object. However, the effect on the object is due to the net force acting on it.
+
+
+A Force can Change the State of Motion
+ Let us now find out what happens when a force acts on an object.
+
+
+Activity 11.3 
+Take a rubber ball and place it on a level surface such as a table top or a concrete floor. Now, gently push the ball along the level surface (Fig. 11.6). Does the ball begin to move? Push the ball again while it is still moving. Is there any change in its speed? Does it increase or decrease? Next, place your palm in front of the moving ball. Remove your palm as soon as the moving ball touches it. Does your palm apply a force on the ball? What happens to the speed of the ball now? Does it increase or decrease? What would happen if you let your palm hold the moving ball?
+A change in either the speed of an object, or its direction of motion, or both, is described as a change in its state of motion. Thus, a force may bring a change in the state of motion of an object. 
+State of Motion 
+The state of motion of an object is described by its speed and the direction of motion. The state of rest is considered to be the state of zero speed. An object may be at rest or in motion; both are its states of motion.
+
+
+Does it mean that the application of a force would always result in a change in the state of motion of the object? Let us find out. It is common experience that many a time application of force does not result in a change in the state of motion. For example, a heavy box may not move at all even if you apply the maximum force that you can exert. Again, no effect of force is observed when you try to push.
+
+
+What happens when you apply a force on an inflated balloon by pressing it between your palms? What happens to the shape of a ball of dough when it is rolled to make a chapati? What happens when you press a rubber ball placed on a table? In all these examples you saw that the application of force on an object may change its shape. Having performed all the above activities, you would have realised that a force l may make an object move from rest. l may change the speed of an object if it is moving. l may change the direction of motion of an object. l may bring about a change in the shape of an object. l may cause some or all of these effects. While a force may cause one or more of these effects, it is important to remember that none of these actions can take place without the action of a force. Thus, an object cannot move by itself, it cannot change speed by itself, it cannot change direction by itself and its shape cannot change by itself.
+
+
+ Contact Forces
+ Muscular Force 
+Can you push or lift a book lying on a table without touching it? Can you lift a bucket of water without holding it? Generally, to apply a force on an object, your body has to be in contact with the object. The contact may also be with the help of a stick or a piece of rope. When we push an object like a school bag or lift a bucket of water, where does the force come from? This force is caused by the action of muscles in our body. The force resulting due to the action of muscles is known as the muscular force.
+It is the muscular force that enables us to perform all activities involving movement or bending of our body.
+Animals also make use of muscular force to carry out their physical activities and other tasks. Animals like bullocks, horses, donkeys and camels are used to perform various tasks for us. In performing these tasks they use muscular force.
+
+
+Since muscular force can be applied only when it is in contact with an object, it is also called a contact force.
+
+
+Friction 
+Recall some of your experiences. A ball rolling along the ground gradually slows down and finally comes to rest. When we stop pedalling a bicycle, it gradually slows down and finally comes to a stop. A car or a scooter also comes to rest once its engine is switched off. Similarly, a boat comes to rest if we stop rowing it. Can you add some more such experiences? In all these situations no force appears to be acting on the objects, yet their speed gradually decreases and they come to rest after some time. What causes a change in their state of motion? Could some force be acting on them! Can you guess the direction in which the force must be acting in each case? The force responsible for changing the state of motion of objects in all these examples is the force of friction. It is the force of friction between the surface of the ball and the ground that brings the moving ball to rest. Similarly, friction between water and the boat brings it to a stop once you stop rowing. The force of friction always acts on all the moving objects and its direction is always opposite to the direction of motion. Since the force of friction arises due to contact between surfaces, it is also an example of a contact force. You may be wondering whether it is essential for the agent applying a force on an object to be always in contact with it. 
+
+
+Non-contact Forces
+
+
+Magnetic Force
+
+
+Take a pair of bar magnets. Place the longer side of one of the magnets over three round shaped pencils or wooden rollers as shown in Fig.11.10. Now bring one end of the other magnet near the end of the magnet placed on the rollers. Make sure that the two magnets do not touch each other. Observe what happens. Next, bring the other end of the magnet near the same end of the magnet placed on the rollers. Note what happens to the magnet placed on the rollers every time another magnet is brought near it.
+Does the magnet on the rollers begin to move when the other magnet is brought near it? Does it always move in the direction of the approaching magnet? What do these observations suggest? Does it mean that some force must be acting between the two magnets?
+Attraction or repulsion between objects can also be seen as another form of pull or push. Do you have to bring the magnets in contact for observing the force between them? A magnet can exert a force on another magnet without being in contact with it. The force exerted by a magnet is an example of a non-contact force. Similarly, the force exerted by a magnet on a piece of iron is also a non contact force.
+
+
+Electrostatic Force
+
+
+A straw is said to have acquired electrostatic charge after it has been rubbed with a sheet of paper. Such a straw is an example of a charged body. The force exerted by a charged body on another charged or uncharged body is known as electrostatic force. This force comes into play even when the bodies are not in contact. The electrostatic force, therefore, is another example of a non-contact force.
+
+
+Gravitational Force
+
+
+ You know that a coin or a pen falls to the ground when it slips off your hand. Leaves and fruits also fall to the ground when they get detached from the plant. Have you ever wondered why it is so? When the coin is held in your hand it is at rest. As soon as it is released, it begins to move downwards. It is clear that the state of motion of the coin undergoes a change. Can this happen without a force acting on it? Which is this force?
+Objects or things fall towards the earth because it pulls them. This force is called the force of gravity, or just gravity. This is an attractive force. The force of gravity acts on all objects. The force of gravity acts on all of us all the time without our being aware of it. Water begins to flow towards the ground as soon as we open a tap. Water in rivers flows downward due to the force of gravity.
+Gravity is not a property of the earth alone. In fact, every object in the universe, whether small or large, exerts a force on every other object. This force is known as the gravitational force.

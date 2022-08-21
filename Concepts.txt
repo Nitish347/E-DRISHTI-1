@@ -1,0 +1,161 @@
+﻿tGraphs
+1. STRAIGHT LINE
+A straight line is an infinite length line that does not have any curves on it. A straight line can be formed between two points also but both the ends extend to infinity. A straight line is a figure formed when two points A (x1, y1) and B (x2, y2) are connected with the shortest distance between them, and the line ends are extended to infinity.
+  
+
+While straight lines have no definite beginning or end, they are represented in our day-to-day lives with examples such as railway tracks or the freeway.
+
+
+Types of Straight Lines
+
+
+Straight lines can be of various types. Generally, the straight lines are classified based on their alignment. Their alignment refers to the angle they form with the x-axis or the y-axis. According to the alignment of straight lines, they are of the following types:
+* Horizontal lines
+* Vertical lines
+* Oblique or Slanted lines
+Let us explore them one by one.
+Horizontal Lines
+
+
+
+
+The lines which are drawn horizontally and are parallel to the x-axis or perpendicular to the y-axis, are called horizontal lines. They form a 0o or 180o angle with the x-axis and a 90o or 270o angle with the y-axis.
+  
+
+
+
+Vertical Lines
+The lines which are drawn vertically and are parallel to the y-axis, or perpendicular to the x-axis, are called vertical lines. They form a 90o or 270o angle with the x-axis and a 0o or 180o angle with the y-axis.
+  
+
+
+
+Oblique or Slanted Lines
+The lines are drawn in a slanting position or form some angle other than 0o, 90o, 180o, 270o, 360o with the horizontal or vertical lines are called oblique or slanting lines.
+  
+
+Properties of a Straight Line
+The properties of straight lines are written below.
+* A straight line has infinite length. We can never calculate the distance between the two extreme points of the line.
+* A straight line has zero areas, zero volume. but it has infinite length.
+* A straight line is a one-dimensional figure.
+* An infinite number of lines can pass through a single point, but there is only one unique line that passes through two points.
+
+
+
+
+
+
+2. LINEAR EQUATIONS
+
+
+Definition of a Linear System with Two Variables
+Real-world applications are often modelled using more than one variable and more than one equation. A system of equations consists of a set of two or more equations with the same variables. In this section, we will study linear systems consisting of two linear equations each with two variables. For example,
+y=-x+5
+y=0.5*x+2
+  
+
+
+
+A solution to a linear system, or simultaneous solution, is an ordered pair (x, y) that solves both of the equations. In this case, (3, 2) is the only solution. To check that an ordered pair is a solution, substitute the corresponding x- and y-values into each equation and then simplify to see if you obtain a true statement for both equations.
+(C) Parabola
+A parabola refers to an equation of a curve, such that a point on the curve is equidistant from a fixed point, and a fixed line. The fixed point is called the focus of the parabola, and the fixed line is called the directrix of the parabola. Also, an important point to note is that the fixed point does not lie on the fixed line. A locus of any point which is equidistant from a given point (focus) and a given line (directrix) is called a parabola. Parabola is an important curve of the conic sections of the coordinate geometry.
+  
+
+Parabola Equation
+The general equation of a parabola is: y = a(x-h)2 + k or x = a(y-k)2 +h, where (h,k) denotes the vertex. The standard equation of a regular parabola is y2 = 4ax.
+(D) Cubic Function
+A cubic function is a polynomial function of degree 3 and is of the form f(x) = ax3 + bx2 + cx + d, where a, b, c, and d are real numbers and a ≠ 0. The basic cubic function (which is also known as the parent cube function) is f(x) = x3. Since a cubic function involves an odd degree polynomial, it has at least one real root. For example, there is only one real number that satisfies x3 = 0 (which is x = 0) and hence the cubic function f(x) = x3 has only one real root (the other two roots are complex numbers). Here are some examples of a cubic function.
+
+
+
+
+  
+
+
+
+(E) Sine Function
+In trigonometry, the sine function can be defined as the ratio of the length of the opposite side to that of the hypotenuse in a right-angled triangle. The sine function is used to find the unknown angle or sides of a right triangle.
+For any right triangle, say ABC, with an angle α, the sine function will be:
+Sin α= Opposite/ Hypotenuse
+Sine Function Formula
+In a right-angled triangle, the sine of an angle is equal to the ratio of side opposite to the angle (also called perpendicular) and hypotenuse.
+Suppose, ‘α’ is the angle, in a right triangle ABC.
+  
+
+Then, the sine formula is given by:
+Sin α= Opposite side/ Hypotenuse
+or
+Sin α = Perpendicular/Hypotenuse
+As per the given figure, the sine formula becomes,
+Sin α = a/h
+where ‘a’ is the opposite side to angle ‘α’ and ‘h’ is the hypotenuse
+  
+
+(F) Cosine Function
+In a right-triangle, cos is defined as the ratio of the length of the adjacent side to that of the longest side i.e. the hypotenuse. Suppose a triangle ABC is taken with AB as the hypotenuse and α as the angle between the hypotenuse and base.
+cos α = Adjacent Side/Hypotenuse
+
+
+Cosine Formula
+From the definition of cos, it is now known that it is the adjacent side divided by the hypotenuse. Now, from the above diagram,
+cos α = AC/AB
+Or,
+cos α = b/h
+  
+
+
+
+
+
+* The sine and cosine graphs
+The sine and cosine graphs are very similar as they both:
+* have the same curve only shifted along the x-axis
+* have an amplitude (half the distance between the maximum and minimum values) of 1
+* have a period (size of one wave) of 360˚  
+
+
+Relations and Functions
+LEARNING OBJECTIVES
+   1. State the domain and range of a relation.
+   2. Identify a function.
+   3. Use function notation.
+The rectangular coordinate system consists of two real number lines that intersect at a right angle. The horizontal number line is called the x-axis, and the vertical number line is called the y-axis. These two number lines define a flat surface called a plane, and each point on this plane is associated with an ordered pair of real numbers (x, y). The first number is called the x-coordinate, and the second number is called the y-coordinate. The intersection of the two axes is known as the origin, which corresponds to the point (0, 0).
+The x- and y-axes break the plane into four regions called quadrants, named using roman numerals I, II, III, and IV, as pictured. The ordered pair (x, y) represents the position of points relative to the origin. For example, the ordered pair (−4, 3) represents the position 4 units to the left of the origin, and 3 units above in the second quadrant.
+  
+
+This system is often called the Cartesian coordinate system, named after the French mathematician René Descartes (1596–1650).
+
+
+Next, we define a relation as any set of ordered pairs. In the context of algebra, the relations of interest are sets of ordered pairs (x, y) in the rectangular coordinate plane. Typically, the coordinates are related by a rule expressed using an algebraic equation. For example, both the algebraic equations 
+y=|x|−2 and x=|y|+1 define relationsips between x and y. Following are some integers that satisfy both equations:
+  
+
+We can visually display any relation of this type on a coordinate plane by plotting the points.  
+The solution sets of each equation will form a relation consisting of infinitely many ordered pairs. We can use the given ordered pair solutions to estimate all of the other ordered pairs by drawing a line through the given points. Here we put an arrow on the ends of our lines to indicate that this set of ordered pairs continues without bounds.
+  
+
+The representation of a relation on a rectangular coordinate plane, as illustrated above, is called a graph. Any curve graphed on a rectangular coordinate plane represents a set of ordered pairs and thus defines a relation.
+The set consisting of all of the first components of a relation, in this case the x-values, is called the domain. And the set consisting of all second components of a relation, in this case the y-values, is called the range (or codomain). Often, we can determine the domain and range of a relation if we are given its graph.
+  
+
+Here we can see that the graph of y=|x|−2 has a domain consisting of all real numbers, 
+ℝ=(−∞,∞), and a range of all y-values greater than or equal to −2, 
+[−2,∞). The domain of the graph of 
+x=|y|+1 consists of all x-values greater than or equal to 1,[1,∞), and the range consists of all real numbers, 
+ℝ=(−∞,∞).
+Functions
+Of special interest are relations where every x-value corresponds to exactly one y-value. A relation with this property is called a function.
+Consider the relations consisting of the seven ordered pair solutions to 
+y=|x|−2 and x=|y|+1. The correspondence between the domain and range of each can be pictured as follows:
+  
+
+Notice that every element in the domain of the solution set of y=|x|−2 corresponds to only one element in the range; it is a function. The solutions to x=|y|+1, on the other hand, have values in the domain that correspond to two elements in the range. In particular, the x-value 4 corresponds to two y-values −3 and 3. 
+Therefore, x=|y|+1 does not define a function.We can visually identify functions by their graphs using the vertical line test. If any vertical line intersects the graph more than once, then the graph does not represent a function.
+  
+
+
+
+The vertical line represents a value in the domain, and the number of intersections with the graph represent the number of values to which it corresponds. As we can see, any vertical line will intersect the graph of 
+y=|x|−2 only once; therefore, it is a function. A vertical line can cross the graph of 
+x=|y|+1 more than once; therefore, it is not a function. As pictured, the x-value 3 corresponds to more than one y-value.
