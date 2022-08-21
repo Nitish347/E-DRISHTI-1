@@ -14,20 +14,15 @@ class _practiceState extends State<practice> {
     var size = MediaQuery.of(context).size;
     var height = size.height;
     var width = size.width;
-    return Container(
-      child: Image.asset(
-        "assets/images/comingsoon.jpg",
-        height: height/2,
-        width: width*0.8,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Image.asset(
+          "assets/images/comingsoon.jpg",
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+        ),
       ),
     );
   }
 }
-
-// class practice extends StatelessWidget {
-//     @override
-//
-//   Widget build(BuildContext context) {
-//     return AssetImage("assets/comingsoon.jpg");
-//   }
-// }

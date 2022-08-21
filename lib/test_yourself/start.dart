@@ -8,7 +8,8 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Start Screen"),
+        title: Text("Test Yourself"),
+        centerTitle: true,
       ),
       backgroundColor: Colors.white,
       body:
@@ -35,7 +36,7 @@ class StartScreen extends StatelessWidget {
                 // color: new Color(0xff622F74),
                 onPressed: (){
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context)=>Quiz()),
+                    MaterialPageRoute(builder: (context)=>SpeechScreen()),
                   );
                 },
               ),

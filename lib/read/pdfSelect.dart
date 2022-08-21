@@ -2,6 +2,8 @@ import 'package:e_drishti/read/pdfView.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../dashboard.dart';
+
 class PdfSelect extends StatefulWidget {
   const PdfSelect({Key? key}) : super(key: key);
 
@@ -49,6 +51,12 @@ class _PdfSelectState extends State<PdfSelect> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: new IconButton(
+            icon: new Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> Dashboard()));
+            },
+          ),
           centerTitle: true,
           title: Text("Study Material"),
         ),

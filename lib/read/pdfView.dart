@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
+import 'package:e_drishti/read/pdfSelect.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
@@ -45,6 +46,12 @@ class _PdfViewState extends State<PdfView> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: new IconButton(
+            icon: new Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> PdfSelect()));
+            },
+          ),
           centerTitle: true,
           title: Text(widget.title),
         ),
