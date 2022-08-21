@@ -1,5 +1,10 @@
+import 'package:e_drishti/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:e_drishti/test_yourself/start.dart';
+import 'package:e_drishti/read/pdfSelect.dart';
+import 'package:e_drishti/concepts/concepts.dart';
+import 'package:e_drishti/practice/practice.dart';
 
 class appbar extends StatelessWidget {
   const appbar({Key? key, required this.title}) : super(key: key);
@@ -38,169 +43,46 @@ class appbar extends StatelessWidget {
 }
 
 
-
-class navBar extends StatefulWidget {
-  navBar ({Key? key}) : super(key: key);
+class navbar extends StatefulWidget {
+  const navbar({Key? key}) : super(key: key);
 
   @override
-  _MyNavigationBarState createState() => _MyNavigationBarState();
+  State<navbar> createState() => _navbarState();
 }
 
-class _MyNavigationBarState extends State<navBar> {
-  int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Home', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Study Material', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Practice', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Test Yourself', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+class _navbarState extends State<navbar> {
+  int currentIndex = 0;
+  final screens = [
+    Dashboard(),
+    PdfSelect(),
+    Concepts(),
+    StartScreen(),
   ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: IndexedStack(
+        index: currentIndex,
+        children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home_rounded,),
-                backgroundColor: Colors.green
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.play_lesson_rounded,),
-                backgroundColor: Colors.yellow
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.lightbulb_rounded,),
-              backgroundColor: Colors.blue,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.library_books_rounded,),
-              backgroundColor: Colors.blue,
-            ),
-          ],
-          type: BottomNavigationBarType.shifting,
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.black,
-          iconSize: 40,
-          onTap: _onItemTapped,
-          elevation: 5
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        backgroundColor: Colors.blue,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
+        iconSize: 30, selectedFontSize: 25,
+        unselectedFontSize: 20,
+
+        onTap: (index) =>setState(() => currentIndex = index,),
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home_rounded, color: Colors.white,), backgroundColor: Colors.blue),
+          BottomNavigationBarItem(icon: Icon(Icons.library_books_rounded, color: Colors.white,),backgroundColor: Colors.blue),
+          BottomNavigationBarItem(icon: Icon(Icons.play_lesson_rounded, color: Colors.white,),  backgroundColor: Colors.blue),
+          BottomNavigationBarItem(icon: Icon(Icons.lightbulb_rounded, color: Colors.white,),  backgroundColor: Colors.blue),
+
+        ],
       ),
-
-
-  //   return Container(
-  //       margin: EdgeInsets.fromLTRB(width * 0.5, width * 0.5, width * 0.5, width * 0.8),
-  //       height: width * .155,
-  //       decoration: BoxDecoration(
-  //         color: Colors.white,
-  //         boxShadow: [
-  //           BoxShadow(
-  //             color: Colors.black.withOpacity(0.1),
-  //             blurRadius: 30,
-  //             offset: Offset(0,10),
-  //           ),
-  //         ],
-  //         borderRadius: BorderRadius.circular(50),
-  //       ),
-  //       child: ListView.builder(
-  //           itemCount: 4,
-  //           scrollDirection: Axis.horizontal,
-  //           padding: EdgeInsets.symmetric(horizontal: width * 0.02),
-  //           itemBuilder: (context, index) => InkWell(
-  //             onTap: (){
-  //             setState((){
-  //             currentindex = index;
-  //               HapticFeedback.lightImpact();
-  //             },
-  //           );
-  // },
-  // splashColor: Colors.transparent,
-  // highlightColor: Colors.transparent,
-  // child: Stack(
-  //     children: [
-  //       AnimatedContainer(
-  //           duration: Duration(seconds: 1),
-  //   curve: Curves.fastLinearToSlowEaseIn,
-  //   width: index == currentindex?width * 0.32: width * 0.18,
-  //   alignment: Alignment.center,
-  //
-  //   child: AnimatedContainer(
-  //   duration: Duration(seconds: 1),
-  //   curve: Curves.fastLinearToSlowEaseIn,
-  //   width: index == currentindex?width * 0.32: 0,
-  //   height: index == currentindex?width * 0.12: 0,
-  //   decoration: BoxDecoration(
-  //   color: index == currentindex? Colors.blueAccent.withOpacity(0.2): Colors.transparent,
-  //   borderRadius: BorderRadius.circular(50),
-  //   ),
-  //   ),
-  //           ),
-  //   AnimatedContainer(
-  //   duration: Duration(seconds: 1),
-  //   curve: Curves.fastLinearToSlowEaseIn,
-  //   width: index == currentindex
-  //   ? width * .31
-  //       : width * .18,
-  //   alignment: Alignment.center,
-  //   child: Stack(
-  //   children: [
-  //   Row(
-  //   children: [
-  //   AnimatedContainer(
-  //   duration: Duration(seconds: 1),
-  //   curve: Curves.fastLinearToSlowEaseIn,
-  //   width:
-  //   index == currentindex ? width * .13 : 0,
-  //   ),
-  //   AnimatedOpacity(
-  //   opacity: index == currentindex ? 1 : 0,
-  //   duration: Duration(seconds: 1),
-  //   curve: Curves.fastLinearToSlowEaseIn,
-  //   child: Text(
-  //   index == currentindex
-  //   ? '${listOfStrings[index]}'
-  //       : '',
-  //   style: TextStyle(
-  //   color: Colors.blueAccent,
-  //   fontWeight: FontWeight.w600,
-  //   fontSize: 15,
-  //   ),
-  //   ),
-  //   ),
-  //   ],
-  //   ),
-  //   Row(
-  //   children: [AnimatedContainer(
-  //   duration: Duration(seconds: 1),
-  //   curve: Curves.fastLinearToSlowEaseIn,
-  //   width:
-  //   index == currentindex ? width * .03 : 20,
-  //   ),
-  //   Icon(
-  //   listOfIcons[index],
-  //   size: width * .076,
-  //   color: index == currentindex
-  //   ? Colors.blueAccent
-  //       : Colors.black26,
-  //   ),
-  //   ],
-  //   ),
-  //   ],
-  //   ),
-  //   ),
-  //   ],
-  //     ),
-  //   ),
-  //   ),
-
     );
   }
 }
