@@ -93,6 +93,7 @@ class PlaceItem extends StatelessWidget {
           ],
         ),
       ),
+
     );
   }
 }

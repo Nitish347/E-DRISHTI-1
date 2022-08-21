@@ -159,6 +159,7 @@ class _DashboardState extends State<Dashboard> {
               ),
               // dashboardUI(),
               PlaceStaggeredGridView(),
+
               // navbar(),
             ],
           ),

@@ -31,11 +31,11 @@ class appbar extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            colors: [Color(0xff2683E5), Color(0xff36ABFB)],
-            begin: const FractionalOffset(0.0, 0.0),
-            end: const FractionalOffset(0.5, 0.0),
-            stops: [0.0, 1.0],
-            tileMode: TileMode.clamp,
+          colors: [Color(0xff2683E5), Color(0xff36ABFB)],
+          begin: const FractionalOffset(0.0, 0.0),
+          end: const FractionalOffset(0.5, 0.0),
+          stops: [0.0, 1.0],
+          tileMode: TileMode.clamp,
         ),
       ),
     );
@@ -61,10 +61,7 @@ class _navbarState extends State<navbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: currentIndex,
-        children: screens,
-      ),
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
@@ -74,14 +71,14 @@ class _navbarState extends State<navbar> {
         iconSize: 30, selectedFontSize: 25,
         unselectedFontSize: 20,
 
-        onTap: (index) =>setState(() => currentIndex = index,),
+
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_rounded, color: Colors.white,), backgroundColor: Colors.blue),
           BottomNavigationBarItem(icon: Icon(Icons.library_books_rounded, color: Colors.white,),backgroundColor: Colors.blue),
           BottomNavigationBarItem(icon: Icon(Icons.play_lesson_rounded, color: Colors.white,),  backgroundColor: Colors.blue),
           BottomNavigationBarItem(icon: Icon(Icons.lightbulb_rounded, color: Colors.white,),  backgroundColor: Colors.blue),
-
         ],
+        onTap: (index) =>setState(() { currentIndex = index;},),
       ),
     );
   }
