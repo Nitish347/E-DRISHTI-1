@@ -65,6 +65,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/comingsoon.jpg
     - assets/images/class.png
     - assets/images/subject.png
     - assets/images/Science.png

@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'dart:math' as math;
 import 'package:e_drishti/place.dart';
+import 'package:e_drishti/practice/practice.dart';
 import 'package:e_drishti/practice/shapes/circle.dart';
 import 'package:e_drishti/read/pdfSelect.dart';
 import 'package:e_drishti/read/read.dart';
@@ -13,7 +14,7 @@ final List<Widget> lst = [
   PdfSelect(),
   Concepts(),
   StartScreen(),
-  Circle(),
+  practice(),
 ];
 
 class PlaceItem extends StatelessWidget {
