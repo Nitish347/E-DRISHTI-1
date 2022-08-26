@@ -45,6 +45,8 @@ dependencies:
   cloud_firestore:
   flutter_pdfview: ^1.0.4
   flutter_bluetooth_serial: ^0.4.0
+  audioplayers: ^0.18.0
+
 
 
 dev_dependencies:
@@ -71,3 +73,4 @@ flutter:
     - assets/images/Science.png
     - assets/images/maths.png
     - assets/pdf/
+    - assets/BEEP.wav
